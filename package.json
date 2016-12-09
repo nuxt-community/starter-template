@@ -1,7 +1,7 @@
 {
-  "name": "Nuxt Starter",
+  "name": "nuxt-starter",
   "version": "1.0.0",
-  "description": "Nuxt starter project",
+  "description": "Nuxt Starter Project",
   "author": "Nuxt",
   "private": true,
   "dependencies": {
