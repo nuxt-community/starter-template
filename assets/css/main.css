@@ -15,6 +15,11 @@ footer
   border-top: 1px solid #ddd;
 }
 
+.logo {
+  width: 243px;
+  height: 218px;
+}
+
 a, a:hover, a:focus, a:visited
 {
   color: #41B883;
