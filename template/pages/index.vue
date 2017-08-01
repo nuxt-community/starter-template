@@ -3,10 +3,10 @@
     <div>
       <logo/>
       <h1 class="title">
-        NUXT
+        {{ name }}
       </h1>
       <h2 class="subtitle">
-        Universal Vue.js Application
+        {{ description }}
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
