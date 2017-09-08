@@ -14,7 +14,7 @@ module.exports = {
     ]
   },
   /*
-  ** Customize the progress-bar color
+  ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
   /*
@@ -22,7 +22,7 @@ module.exports = {
   */
   build: {
     /*
-    ** Run ESLINT on save
+    ** Run ESLint on save
     */
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
