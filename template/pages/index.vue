@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <logo/>
+      <app-logo/>
       <h1 class="title">
         {{ name }}
       </h1>
@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import AppLogo from '~/components/AppLogo.vue'
 
 export default {
   components: {
-    Logo
+    AppLogo
   }
 }
 </script>
