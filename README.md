@@ -4,6 +4,10 @@ A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template without th
 
 Live demo: https://starter.nuxtjs.org
 
+## Prerequisites
+
+Make sure to have `node 8.0+` and `npm 5.0+` installed
+
 ## Installation
 
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
