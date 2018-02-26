@@ -1,7 +1,7 @@
 module.exports = {
   helpers: {
-    raw: function(options) {
-      return options.fn(this)
+    escape: function(value) {
+      return value.replace(/'/g, '&apos;');
     }
   },
   prompts: {
