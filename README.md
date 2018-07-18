@@ -46,3 +46,4 @@ $ npm start
 # generate a static project
 $ npm run generate
 ```
+
