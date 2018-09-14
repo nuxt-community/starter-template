@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>Welcome to your new website</h1>
+    <h1>Welcome to {{ name }}</h1>
   </section>
 </template>
 
