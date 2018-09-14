@@ -2,8 +2,6 @@
 
 A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template without the distraction of a complicated development environment.
 
-Live demo: https://starter.nuxtjs.org
-
 ## Prerequisites
 
 Make sure to have `node 8.0+` and `npm 5.0+` installed
@@ -25,25 +23,13 @@ $ npm install # Or yarn install
 
 ### Development
 
+Serve with hot reloading at localhost:3000.
+
 ``` bash
-# serve with hot reloading at localhost:3000
+# by using docker
+$ docker-compose up
+# or without docker
 $ npm run dev
 ```
 
 Go to [http://localhost:3000](http://localhost:3000)
-
-### Production
-
-``` bash
-# build for production and launch the server
-$ npm run build
-$ npm start
-```
-
-### Generate
-
-``` bash
-# generate a static project
-$ npm run generate
-```
-
