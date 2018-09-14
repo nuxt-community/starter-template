@@ -1,7 +1,19 @@
+const webpack = require('webpack')
+const fs = require('fs-extra')
+const morgan = require('morgan')
+const rfs = require('rotating-file-stream')
+const logDirectory = './logs'
+
+// ensure log directory exists
+fs.existsSync(logDirectory) || fs.ensureDirSync(logDirectory)
+
+// create a rotating write stream
+const accessLogStream = rfs('access.log', {
+  interval: '1d', // rotate daily
+  path: logDirectory
+})
+
 module.exports = {
-  /*
-  ** Headers of the page
-  */
   head: {
     title: '{{ name }}',
     meta: [
@@ -13,17 +25,38 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /*
-  ** Customize the progress bar color
-  */
+
+  css: [
+    { src: '~assets/css/main.sass', lang: 'sass' }
+  ],
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: '{{ websiteUrl }}',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: false,
+    routes: [ '/' ]
+  },
+
+  serverMiddleware: [morgan('combined', { stream: accessLogStream })],
+
+  router: {
+    middleware: ['i18n', 'contentful']
+  },
+
   loading: { color: '#3B8070' },
-  /*
-  ** Build configuration
-  */
+
+  plugins: [
+    { src: '~/plugins/i18n' }
+  ],
+
+  modules: [
+    ['nuxt-sass-resources-loader', '@/assets/css/variables.sass'],
+    '@nuxtjs/sitemap'
+  ],
+
   build: {
-    /*
-    ** Run ESLint on save
-    */
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -33,7 +66,13 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+
+    plugins: [
+      new webpack.ProvidePlugin({
+        _: 'lodash'
+      })
+    ]
   }
 }
 
