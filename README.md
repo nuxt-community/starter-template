@@ -13,8 +13,8 @@ Make sure to have `node 8.0+` and `npm 5.0+` installed
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
 ``` bash
-$ vue init nuxt-community/starter-template my-project  
-$ cd my-project                     
+$ vue init muxumuxu/starter-template my-project
+$ cd my-project
 # install dependencies
 $ npm install # Or yarn install
 ```
