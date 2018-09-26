@@ -19,7 +19,11 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '{{escape description }}' }
+      { hid: 'description', name: 'description', content: '{{escape description }}' },
+      { hid: 'og:site_name', property: 'og:site_name', content: '{{ name }}' },
+      { hid: 'og:image', property: 'og:image', content: '' },
+      { hid: 'og:title', property: 'og:title', content: '{{ name }}' },
+      { hid: 'og:description', property: 'og:description', content: '{{escape description }}' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -75,4 +79,3 @@ module.exports = {
     ]
   }
 }
-
