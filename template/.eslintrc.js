@@ -2,20 +2,27 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
+    jquery: true
   },
   parserOptions: {
     parser: 'babel-eslint'
   },
   extends: [
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential'
+    'plugin:vue/essential',
+    'plugin:vue/strongly-recommended',
+    'plugin:prettier/recommended',
+    'eslint:recommended'
   ],
-  // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
-  // add your custom rules here
-  rules: {}
+  plugins: ['vue'],
+  rules: {
+    'quotes': [2, 'single', 'avoid-escape'],
+    'space-before-function-paren': ['error', 'never'],
+    'semi': [2, 'never'],
+    'no-console': 2,
+    'vue/max-attributes-per-line': 0,
+    'vue/require-prop-types': 0,
+    'no-unused-vars': ['error', { 'argsIgnorePattern': '^_' }],
+    'prettier/prettier': ['error', { 'semi': false, 'singleQuote': true }]
+  }
 }

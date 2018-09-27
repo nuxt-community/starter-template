@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    stdin_open: true
+    tty: true
+    build: .
+    command: 'npm run dev'
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/app'
+      - 'app_node_modules:/app/node_modules'
+      - 'app_logs:/var/log'
+
+volumes:
+  app_node_modules: {}
+  app_logs: {}
