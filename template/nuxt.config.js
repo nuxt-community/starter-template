@@ -15,6 +15,9 @@ const accessLogStream = rfs('access.log', {
 
 module.exports = {
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     title: '{{ name }}',
     meta: [
       { charset: 'utf-8' },
