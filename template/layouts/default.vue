@@ -1,8 +1,10 @@
 <template>
-  <a href="#main">Skip to content</a>
-  <main id="main">
-    <nuxt/>
-  </main>
+  <div>
+    <a href="#main">Skip to content</a>
+    <main id="main">
+      <nuxt/>
+    </main>
+  </div>
 </template>
 
 <script>
