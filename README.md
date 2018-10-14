@@ -1,4 +1,8 @@
-# Starter
+# IMPORTANT: This template is deprecated
+
+Please use [create-nuxt-app](https://github.com/nuxt-community/create-nuxt-app) to scaffold your Nuxt applications instead!
+
+## Starter
 
 A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template without the distraction of a complicated development environment.
 
