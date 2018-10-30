@@ -1,18 +1,26 @@
 @import 'reset'
 @import 'variables'
+@import 'helpers'
 
 *
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  -webkit-tap-highlight-color: rgba($black, 0)
+  -webkit-tap-highlight-color: transparent
 
 html
   background: $white
   font-size: 100%
 
+  &::selection
+    background: $black
+    color: $white
+
+  *:focus
+    outline: 2px solid $black
+
 body
   font-family: $font-default
-  background: $white
+  background: darken($white, 2%)
 
 @media (max-width: 800px)
   html
